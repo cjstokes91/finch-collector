@@ -1,14 +1,13 @@
 from django.shortcuts import render
-
+from django.views.generic.edit import CreateView
 from django.http import HttpResponse 
 from .models import Finch
 
  
 
 # Create your views here.
-def home(request): 
-  return HttpResponse('<h1>Hello Finches<h1>')
-
+def home(request):
+  return render(request, 'home.html')
 def about(request): 
   return render(request, 'about.html')
 
